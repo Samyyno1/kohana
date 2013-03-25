@@ -5,7 +5,7 @@
  * and open the template in the editor.
  */
 
-class Controller_Folder_Test extends Controller {
+class Controller_Test extends Controller {
     public function action_pokaz() {
         echo "dupa";
     }
