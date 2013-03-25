@@ -123,17 +123,15 @@ Kohana::modules(array(
  * Set the routes. Each route must have a minimum of a name, a URI and a set of
  * defaults for the URI.
  */
-Route::set('admin', 'folder(/<controller>(/<action>(/<id>)))')
-  ->defaults(array(
-    'directory' => 'folder',
-    'controller' => 'Test',
-    'action' => 'pokaz',
-));
-
-var_dump(Route::all());
+Route::set('admin', 'application(/<controller>(/<action>(/<id>)))')
+        ->defaults(array(
+            'directory' => 'Folder',
+            'controller' => 'test',
+            'action' => 'pokaz',
+        ));
 
 Route::set('default', '(<controller>(/<action>(/<id>)))')
-	->defaults(array(
-		'controller' => 'welcome',
-		'action'     => 'index',
-	));
+        ->defaults(array(
+            'controller' => 'welcome',
+            'action' => 'index',
+        ));
